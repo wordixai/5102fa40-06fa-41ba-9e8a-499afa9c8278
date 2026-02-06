@@ -46,5 +46,32 @@
   "clientDataCache": {
     "data": null,
     "timestamp": 1770392978751
+  },
+  "projects": {
+    "/app": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "projectOnboardingSeenCount": 0,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        "App.tsx",
+        "Index.tsx",
+        "button.tsx",
+        "tailwind.config.ts",
+        "App.css"
+      ],
+      "exampleFilesGeneratedAt": 1770393896726
+    }
+  },
+  "skillUsage": {
+    "ai-integration": {
+      "usageCount": 1,
+      "lastUsedAt": 1770393901129
+    }
   }
 }
