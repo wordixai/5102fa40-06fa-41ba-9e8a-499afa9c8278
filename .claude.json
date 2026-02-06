@@ -33,7 +33,9 @@
     ],
     "tengu_attribution_header": false,
     "tengu_workout": false,
-    "tengu_plan_mode_interview_phase": false
+    "tengu_plan_mode_interview_phase": false,
+    "tengu_file_write_optimization": false,
+    "tengu_cork_m4q": false
   },
   "userID": "5b4899fc0d6d571b14c3bbf49275848667682f318315c004ae15e5b8d645f78f",
   "firstStartTime": "2026-02-06T15:49:38.254Z",

@@ -1,13 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-   
+    --background: 0 0% 100%;
+    --foreground: 0 0% 8%;
+
+    --card: 30 20% 99%;
+    --card-foreground: 0 0% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 8%;
+
+    --primary: 8 65% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 30 15% 96%;
+    --secondary-foreground: 0 0% 15%;
+
+    --muted: 30 10% 95%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 30 15% 94%;
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 10% 91%;
+    --input: 30 10% 91%;
+    --ring: 8 65% 65%;
+
+    --radius: 0.625rem;
+
+    /* Fashion tokens */
+    --fashion-coral: 8 65% 65%;
+    --fashion-rose: 350 50% 72%;
+    --fashion-gold: 38 60% 62%;
+    --fashion-cream: 40 30% 97%;
+    --fashion-charcoal: 0 0% 18%;
+
+    /* Shadows */
+    --shadow-soft: 0 2px 20px -4px hsl(0 0% 0% / 0.08);
+    --shadow-elevated: 0 8px 30px -8px hsl(0 0% 0% / 0.12);
+    --shadow-glow: 0 0 40px hsl(8 65% 65% / 0.15);
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(30 20% 98%), hsl(8 40% 96%));
+    --gradient-coral: linear-gradient(135deg, hsl(8 65% 65%), hsl(350 50% 72%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(30 20% 98%));
   }
 
-  .dark {
+  * {
+    @apply border-border;
+  }
 
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+@layer components {
+  .container-app {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .text-gradient-coral {
+    background: linear-gradient(135deg, hsl(var(--fashion-coral)), hsl(var(--fashion-rose)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .bg-coral-gradient {
+    background: var(--gradient-coral);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      hsl(var(--muted)) 25%,
+      hsl(var(--muted-foreground) / 0.08) 50%,
+      hsl(var(--muted)) 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s linear infinite;
   }
 }
